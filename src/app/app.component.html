@@ -1,0 +1,32 @@
+<!-- <tag-input [(ngModel)]='item' theme='bootstrap' [separatorKeyCodes]="[32]"></tag-input> -->
+<!-- <h1 id="heading">Welcome to Ice-Cream Corner</h1> 
+<br><br>
+<tag-input id="menu" [ngModel]="[]"
+           [onlyFromAutocomplete]="true"  theme='bootstrap'>
+    <tag-input-dropdown [showDropdownIfEmpty]="true"
+                        [autocompleteItems]="['Vanilla', 'Strobbery', 'Blackcurrent', 'Blue Velevt','Chocolate']">
+        <ng-template let-item="item" let-index="index">
+            {{ index }}: {{ item.display }}
+        </ng-template>
+    </tag-input-dropdown>
+</tag-input> -->
+<div class="row" id="row">
+  <div class="col-3"><h3>Cascade Valley Hospital</h3></div>
+  <div class="col-4">
+    <div style="border:1px solid black; border-radius:10px">
+        <h4>Search</h4>
+    </div></div>
+  <div class="col-1"><h4>Login</h4></div>
+  <div class="col-1"><h4>Register</h4></div>
+  <div class="col-1"><h4>About</h4></div>
+  <div class="col-1"><h4>Profile</h4></div>
+  <div class="col-1"><h4>Details</h4></div>
+</div>
+<div class="row"  >
+    <div class="col-7">
+        <app-form-array></app-form-array>
+    </div>
+    <div class="col-5">
+        <app-leftnav></app-leftnav>
+    </div>
+</div>
