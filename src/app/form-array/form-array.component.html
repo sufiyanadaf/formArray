@@ -1,0 +1,39 @@
+<div id="box">
+    <form [formGroup]="myForm">
+        <h2>Detail of Doctor</h2>
+        <label>Name of Doctor :</label>
+        <br>
+        <input type="text" formControlName="name" placeholder="Enter_Name">
+        <br><br>
+        <label>Address :</label>
+        <br>
+        <input type="text" formControlName="address" placeholder="Enter_Address">
+        <br><br>
+        <label>Phone_Number :</label>
+        <br>
+        <input type="text" formControlName="phone_number" placeholder="Enter_Phonenumber">
+        <br><br>
+        <label>E-mail :</label>
+        <br>
+        <input type="email" formControlName="email" placeholder="Enter_Email">
+        <br><br>
+        <label>Date of Joining :</label>
+        <br>
+        <input type="date" formControlName="date" placeholder="Enter_Date">
+        <br><br>
+        <h3>Details of Patients</h3>
+        <div formArrayName="arr" *ngFor="let a of myForm.get('arr').controls; let i= index">
+            <div [formGroupName]="i" style="margin-bottom: 10px;">
+                <label>Patient Name :</label>
+                <input type="text" formControlName="patient_name">
+                <br><br>
+                <label>Date of Admit :</label>
+                <input type="date" formControlName="date_admit">
+                <br><br>
+                <button (click)="add()" class="btn btn-success">Add Patient Detail</button>&nbsp;&nbsp;&nbsp;
+                <button (click)="remove(i)" class="btn btn-danger">Remove Patient Details</button>
+            </div>
+        </div>
+        <button (click)="submit()" class="btn btn-dark">Submit</button>
+    </form>
+</div>
